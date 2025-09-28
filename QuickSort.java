@@ -6,21 +6,20 @@ public class QuickSort{
 
     public static int parciona(int vetor[], int inicio, int fim){
 
-        int pivo = (vetor[inicio] + vetor[fim]) / 2; //38
-        //42 7 13 89 21 5 64 37 18 73 73 11 56 92 34
+        int pivo = (vetor[inicio] + vetor[fim]) / 2;
         while (inicio < fim) {
 
             while (inicio < fim && vetor[inicio] <= pivo) {
-                inicio = inicio + 1; //3
+                inicio = inicio + 1;
             }
 
             while (inicio < fim && vetor[fim] > pivo) {
                 fim = fim - 1;
             }
 
-            int aux = vetor[fim]; //34
-            vetor[fim] = vetor[inicio]; //42
-            vetor[inicio] = aux; //34           
+            int aux = vetor[fim]; 
+            vetor[fim] = vetor[inicio]; 
+            vetor[inicio] = aux;          
         }
 
         return inicio;
